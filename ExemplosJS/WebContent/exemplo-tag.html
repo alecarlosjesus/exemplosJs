@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplos Javascript</title>
+</head>
+<body>
+	<!-- Ex = Exemplo -->
+	<h1>Alterando o Elemento através de (tag)</h1>
+	<ul>
+		<li>Jan</li>
+		<li>Fev</li>
+		<li>Mar</li>
+		<li>Abr</li>
+		<li>Mai</li>
+		<li>Jun</li>
+		<li>Jul</li>
+		<li>Ago</li>
+		<li>Set</li>
+		<li>Out</li>
+		<li>Nov</li>
+		<li>Dez</li>
+	</ul>
+
+	<form>
+		<select id="lstMesEx" onchange="deselDt()">
+			<option value="0">Selecione o Mês</option>
+			<option title="Jan" value="< Jan >" onclick="selDt(0)">Janeiro</option>
+			<option title="Fev" value="< Fev >" onclick="selDt(1)">Fevereiro</option>
+			<option title="Mar" value="< Mar >" onclick="selDt(2)">Março</option>
+			<option title="Abr" value="< Abr >" onclick="selDt(3)">Abril</option>
+			<option title="Mai" value="< Mai >" onclick="selDt(4)">Maio</option>
+			<option title="Jun" value="< Jun >" onclick="selDt(5)">Junho</option>
+			<option title="Jul" value="< Jul >" onclick="selDt(6)">Julho</option>
+			<option title="Ago" value="< Ago >" onclick="selDt(7)">Agosto</option>
+			<option title="Set" value="< Set >" onclick="selDt(8)">Setembro</option>
+			<option title="Out" value="< Out >" onclick="selDt(9)">Outubro</option>
+			<option title="Nov" value="< Nov >" onclick="selDt(10)">Novembro</option>
+			<option title="Dez" value="< Dez >" onclick="selDt(11)">Dezembro</option>
+		</select><br />
+	</form>
+
+	<script type="text/javascript">
+		var mes0;
+		function selDt(mes) {
+		    mes0 = mes;
+		    document.getElementsByTagName("li")[mes].innerHTML = document.getElementsByTagName("option")[mes+1].value;
+		}
+		function deselDt() {
+			document.getElementsByTagName("li")[mes0].innerHTML = document.getElementsByTagName("option")[mes0+1].title;
+		}
+		
+	</script>
+</body>
+</html>
+
+

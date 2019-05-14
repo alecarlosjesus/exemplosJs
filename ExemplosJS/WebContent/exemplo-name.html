@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplos Javascript</title>
+</head>
+<body>
+	<!-- Ex = Exemplo -->
+	<h1>Alterando o Elemento através de (name)</h1>
+	<h1 id="titEx">Exemplo *name*</h1>
+
+	<form>
+		<label for="nvTit1Ex">Selecione o novo título da página!</label><br />
+		<input type="radio" name="rdNvTitEx" id="rdNvTit1Ex" value="0"
+			title="Exemplo 1" onclick="altTitPag('rdNvTit1Ex')" />Exemplo 1<br />
+		<input type="radio" name="rdNvTitEx" id="rdNvTit2Ex" value="1"
+			title="Exemplo 2" onclick="altTitPag('rdNvTit2Ex')" />Exemplo 2<br />
+		<input type="radio" name="rdNvTitEx" id="rdNvTit3Ex" value="2"
+			title="Exemplo 3" onclick="altTitPag('rdNvTit3Ex')" />Exemplo 3<br />
+	</form>
+
+	<script type="text/javascript">
+		function altTitPag(idElemento) {
+			document.getElementById("titEx").innerHTML = document
+					.getElementsByName("rdNvTitEx")[document
+					.getElementById(idElemento).value].title;
+		}
+	</script>
+</body>
+</html>
+
+

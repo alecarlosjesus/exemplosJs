@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Exemplos Javascript</title>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</head>
+<body>
+	<!-- Ex = Exemplo -->
+	<h1>Alterando o Elemento através de (id)</h1>
+	<h1 id="titEx">Exemplo *id*</h1>
+
+	<form>
+		<label for="nvTitEx">Digite o Título da página</label><br />
+		<input type="text" name="txtNvTitEx" id="nvTitEx"><br />
+		<input type="button" id="btnSubmitEx" value="Enviar" onclick="alterarTituloPagina()">
+		<input type="reset"	id="btnResetEx" value="Limpar">
+	</form>
+
+	<script type="text/javascript">
+		function alterarTituloPagina() {
+			document.getElementById("titEx").innerHTML = document.getElementById("nvTitEx").value;
+		}
+		win
+	</script>
+	
+	
+	
+	
+	<div id="demo" onclick=""></div>
+	
+	<script type="text/javascript">
+		function alterarElemento() {
+		    document.getElementById("demo").innerHTML = "Alô Mundo!";
+		    
+		}
+		
+	</script>	
+	
+	
+	
+	
+</body>
+</html>
+
+
